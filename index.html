@@ -23,7 +23,7 @@
     nav.menu-lateral {
         width: 240px;
         background-color: #111111;
-        color: #c9a66b; /* dorado suave */
+        color: #c9a66b;
         padding: 40px 25px;
         box-shadow: 4px 0 15px rgba(0,0,0,0.8);
         position: fixed;
@@ -84,7 +84,6 @@
         font-weight: 700;
     }
 
-    /* Contenido principal */
     main.contenido {
         margin-left: 240px;
         padding: 60px 60px 80px 60px;
@@ -207,20 +206,6 @@
         letter-spacing: 0.05em;
     }
 
-    /* Gerson caminando - con menos presencia para no romper el estilo */
-    #gerson {
-        position: fixed;
-        bottom: 30px;
-        left: -100px;
-        width: 100px;
-        height: auto;
-        transition: transform 0.3s ease;
-        z-index: 1000;
-        pointer-events: none;
-        filter: drop-shadow(0 0 3px rgba(201, 166, 107, 0.7));
-        opacity: 0.85;
-    }
-
     /* Responsive */
     @media(max-width: 800px) {
         nav.menu-lateral {
@@ -258,8 +243,6 @@
             max-width: 100%;
         }
     }
-
-    /* Import Google Fonts */
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet" />
 </head>
@@ -272,7 +255,6 @@
         <li><button onclick="window.location.href='pagina2.html'">Platos Fuertes</button></li>
         <li><button onclick="window.location.href='pagina3.html'">Postres</button></li>
         <li><button onclick="window.location.href='pagina4.html'">Vinos</button></li>
-        <!-- Nuevo botón que lleva al formulario -->
         <li><button onclick="window.location.href='Formulario.html'">Reservaciones</button></li>
     </ul>
 </nav>
@@ -302,25 +284,9 @@
     <footer>© 2025 Restaurante La Elegancia. Todos los derechos reservados.</footer>
 </main>
 
-<!-- Imagen animada de Gerson caminando -->
-<img id="gerson" src="https://static.wikia.nocookie.net/deltarune/images/e/e7/Old_man_Gerson_overworld.png/revision/latest?cb=20250616201110" alt="Gerson caminando" />
-
-<script>
-  const gerson = document.getElementById('gerson');
-  let posX = 100;
-  const speed = 0.5;
-
-  function moveGerson() {
-    posX += speed;
-    if (posX > window.innerWidth) {
-      posX = -100;
-    }
-    gerson.style.left = posX + 'px';
-    requestAnimationFrame(moveGerson);
-  }
-
-  moveGerson();
-</script>
+</body>
+</html>
 
 </body>
 </html>
+
