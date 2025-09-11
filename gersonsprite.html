@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Gerson Caminando</title>
+<style>
+  body {
+    background-color: #fff8e1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden; /* evitar scroll horizontal */
+    height: 100vh;
+    position: relative;
+  }
+  #gerson {
+    position: fixed;
+    bottom: 20px; /* un poco arriba del borde inferior */
+    left: -100px; /* empieza fuera de pantalla a la izquierda */
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+</style>
+</head>
+<body>
+
+<img id="gerson" src="https://static.wikia.nocookie.net/deltarune/images/e/e7/Old_man_Gerson_overworld.png/revision/latest?cb=20250616201110" alt="Gerson caminando" />
+
+<script>
+  const gerson = document.getElementById('gerson');
+  let posX = -100; // posición inicial (fuera pantalla a la izquierda)
+  const speed = 2; // píxeles por frame
+
+  function moveGerson() {
+    posX += speed;
+    if (posX > window.innerWidth) {
+      posX = -100; // reinicia para que vuelva a entrar por la izquierda
+    }
+    gerson.style.left = posX + 'px';
+    requestAnimationFrame(moveGerson);
+  }
+
+  moveGerson();
+</script>
+
+</body>
+</html>

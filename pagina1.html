@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Entradas - Restaurante La Elegancia</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #f7f1e1 0%, #d8c6ad 100%);
+    font-family: 'Libre Baskerville', serif;
+    color: #5a3e1b;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 3.6em;
+    margin-bottom: 10px;
+    color: #7a5a2e;
+    text-shadow: 0 0 10px #b4976a;
+  }
+
+  p.subtitle {
+    font-style: italic;
+    font-size: 1.3em;
+    margin-bottom: 60px;
+    color: #8a6f43;
+  }
+
+  .menu-list {
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+    background-color: rgba(218, 203, 175, 0.85);
+    border-radius: 30px;
+    padding: 40px 60px;
+    box-shadow: 0 10px 30px rgba(122, 94, 51, 0.5);
+  }
+
+  .menu-list li {
+    font-size: 1.3em;
+    margin: 22px 0;
+    font-weight: 600;
+    border-bottom: 1px solid #9e7c3e;
+    padding-bottom: 12px;
+    cursor: default;
+    transition: color 0.3s ease;
+  }
+
+  .menu-list li:last-child {
+    border-bottom: none;
+  }
+
+  .menu-list li:hover {
+    color: #bca969;
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .images img {
+    border-radius: 25px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 12px 35px rgba(154, 124, 54, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .images img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 20px 45px rgba(154, 124, 54, 1);
+  }
+
+  footer {
+    font-style: italic;
+    color: #7a5a2e;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .menu-list {
+      padding: 30px 20px;
+    }
+    .images img {
+      width: 90vw;
+      height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Entradas Deliciosas</h1>
+  <p class="subtitle">Sabores que abren el apetito con elegancia</p>
+
+  <ul class="menu-list" aria-label="Lista de entradas">
+    <li>Carpaccio de res con rúcula y parmesano</li>
+    <li>Tartar de atún con aguacate y soja</li>
+    <li>Ensalada César con pollo a la parrilla</li>
+    <li>Bruschettas variadas con tomate y albahaca</li>
+    <li>Sopa fría de melón con jamón ibérico</li>
+  </ul>
+
+  <div class="images" aria-label="Galería de imágenes de entradas">
+    <!-- Aquí puedes poner tus imágenes personalizadas -->
+    <img src="carpaccio.jpg" alt="Carpaccio de res" />
+    <img src="tartar.jpg" alt="Tartar de atún" />
+    <img src="ensalada.jpg" alt="Ensalada César" />
+  </div>
+
+  <footer>© 2025 Restaurante La Elegancia</footer>
+</body>
+</html>

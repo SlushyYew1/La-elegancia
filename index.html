@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Restaurante La Elegancia</title>
+<style>
+    /* Reset básico */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: linear-gradient(135deg, #1c1c1c 0%, #121212 100%);
+        font-family: 'Georgia', serif;
+        color: #e3d9c6;
+        display: flex;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* Menú lateral elegante */
+    nav.menu-lateral {
+        width: 240px;
+        background-color: #111111;
+        color: #c9a66b; /* dorado suave */
+        padding: 40px 25px;
+        box-shadow: 4px 0 15px rgba(0,0,0,0.8);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1100;
+        border-right: 2px solid #c9a66b;
+        font-weight: 500;
+    }
+
+    nav.menu-lateral h2 {
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+        letter-spacing: 0.2em;
+        font-family: 'Cormorant Garamond', serif;
+        text-transform: uppercase;
+        color: #c9a66b;
+        text-shadow: 0 0 8px #c9a66b;
+    }
+
+    nav.menu-lateral ul {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    nav.menu-lateral li {
+        margin: 20px 0;
+    }
+
+    nav.menu-lateral button {
+        width: 100%;
+        padding: 14px 12px;
+        font-size: 1.1em;
+        font-weight: 600;
+        border-radius: 30px;
+        border: 2px solid #c9a66b;
+        cursor: pointer;
+        background-color: transparent;
+        color: #c9a66b;
+        transition: background-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+        letter-spacing: 0.05em;
+        font-family: 'Cormorant Garamond', serif;
+        box-shadow: inset 0 0 0 0 #c9a66b;
+    }
+
+    nav.menu-lateral button:hover {
+        background-color: #c9a66b;
+        color: #111111;
+        box-shadow: 0 0 15px #c9a66b;
+        border-color: #c9a66b;
+        font-weight: 700;
+    }
+
+    /* Contenido principal */
+    main.contenido {
+        margin-left: 240px;
+        padding: 60px 60px 80px 60px;
+        flex-grow: 1;
+        max-width: calc(100% - 240px);
+        text-align: center;
+        font-family: 'Georgia', serif;
+        background: #1e1e1e;
+        box-shadow: inset 0 0 60px #3a2e1a;
+        min-height: 100vh;
+        color: #e3d9c6;
+    }
+
+    h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3.8em;
+        margin-bottom: 20px;
+        letter-spacing: 0.1em;
+        color: #d4b775;
+        text-shadow: 0 0 15px #d4b775;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.5em;
+        margin-bottom: 60px;
+        font-style: italic;
+        color: #bfae7a;
+        text-shadow: 0 0 6px #bfae7a;
+        line-height: 1.6;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul.info-list {
+        list-style-type: none;
+        padding: 0;
+        max-width: 480px;
+        margin: 0 auto 70px auto;
+    }
+
+    ul.info-list li {
+        background-color: #2a251a;
+        margin: 18px 0;
+        padding: 20px 25px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(212, 183, 117, 0.4);
+        font-weight: 600;
+        font-size: 1.3em;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        font-family: 'Cormorant Garamond', serif;
+        cursor: default;
+    }
+
+    ul.info-list li:hover {
+        background-color: #d4b775;
+        color: #1e1e1e;
+        box-shadow: 0 0 25px #d4b775;
+    }
+
+    .image-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image-gallery img {
+        border-radius: 25px;
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        box-shadow: 0 10px 20px rgba(212, 183, 117, 0.7);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+        filter: brightness(0.92);
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 15px 30px rgba(212, 183, 117, 1);
+        filter: brightness(1);
+    }
+
+    .share-button {
+        background-color: transparent;
+        border: 2px solid #c9a66b;
+        color: #c9a66b;
+        font-weight: 700;
+        padding: 16px 40px;
+        font-size: 1.3em;
+        border-radius: 35px;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #c9a66b;
+        transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 60px;
+        font-family: 'Cormorant Garamond', serif;
+        letter-spacing: 0.1em;
+    }
+
+    .share-button:hover {
+        background-color: #c9a66b;
+        color: #111111;
+        box-shadow: 0 0 18px #c9a66b;
+    }
+
+    footer {
+        margin-top: 80px;
+        font-size: 1em;
+        color: #8e7e53;
+        font-style: italic;
+        font-family: 'Georgia', serif;
+        letter-spacing: 0.05em;
+    }
+
+    /* Gerson caminando - con menos presencia para no romper el estilo */
+    #gerson {
+        position: fixed;
+        bottom: 30px;
+        left: -100px;
+        width: 100px;
+        height: auto;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        pointer-events: none;
+        filter: drop-shadow(0 0 3px rgba(201, 166, 107, 0.7));
+        opacity: 0.85;
+    }
+
+    /* Responsive */
+    @media(max-width: 800px) {
+        nav.menu-lateral {
+            position: relative;
+            width: 100%;
+            height: auto;
+            box-shadow: none;
+            flex-direction: row;
+            justify-content: center;
+            padding: 20px 10px;
+            border-right: none;
+            border-bottom: 2px solid #c9a66b;
+        }
+        nav.menu-lateral h2 {
+            font-size: 1.8em;
+            margin-bottom: 0;
+            letter-spacing: 0.12em;
+        }
+        nav.menu-lateral ul {
+            display: flex;
+            gap: 15px;
+            flex-grow: 0;
+        }
+        nav.menu-lateral li {
+            margin: 0;
+        }
+        nav.menu-lateral button {
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+        main.contenido {
+            margin-left: 0;
+            padding: 30px 20px 60px 20px;
+            max-width: 100%;
+        }
+    }
+
+    /* Import Google Fonts */
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="menu-lateral" aria-label="Menú principal">
+    <h2>Menú</h2>
+    <ul>
+        <li><button onclick="window.location.href='pagina1.html'">Entradas</button></li>
+        <li><button onclick="window.location.href='pagina2.html'">Platos Fuertes</button></li>
+        <li><button onclick="window.location.href='pagina3.html'">Postres</button></li>
+        <li><button onclick="window.location.href='pagina4.html'">Vinos</button></li>
+        <!-- Nuevo botón que lleva al formulario -->
+        <li><button onclick="window.location.href='Formulario.html'">Reservaciones</button></li>
+    </ul>
+</nav>
+
+<main class="contenido">
+    <h1>Bienvenido a La Elegancia</h1>
+    <p>Disfruta de una experiencia culinaria excepcional con sabores exclusivos y un ambiente refinado.</p>
+
+    <ul class="info-list" aria-label="Características del restaurante">
+        <li>Chef Ejecutivo de Renombre Internacional</li>
+        <li>Ingredientes Orgánicos y de Alta Calidad</li>
+        <li>Técnicas Gastronómicas Innovadoras</li>
+        <li>Postres Artesanales Únicos</li>
+        <li>Servicio Impecable y Ambiente Exclusivo</li>
+    </ul>
+
+    <div class="image-gallery" aria-label="Galería de imágenes gastronómicas">
+        <img src="gastro.jpg" alt="Plato gourmet elegante 1" />
+        <img src="gastro 2.jpg" alt="Plato gourmet elegante 2" />
+        <img src="gastro 3.jpg" alt="Plato gourmet elegante 3" />
+    </div>
+
+    <a class="share-button" href="https://wa.me/?text=¡Descubre%20La%20Elegancia!%20https://tu-pagina-web.com" target="_blank" rel="noopener noreferrer" aria-label="Compartir con WhatsApp">
+        Compartir con WhatsApp
+    </a>
+
+    <footer>© 2025 Restaurante La Elegancia. Todos los derechos reservados.</footer>
+</main>
+
+<!-- Imagen animada de Gerson caminando -->
+<img id="gerson" src="https://static.wikia.nocookie.net/deltarune/images/e/e7/Old_man_Gerson_overworld.png/revision/latest?cb=20250616201110" alt="Gerson caminando" />
+
+<script>
+  const gerson = document.getElementById('gerson');
+  let posX = 100;
+  const speed = 0.5;
+
+  function moveGerson() {
+    posX += speed;
+    if (posX > window.innerWidth) {
+      posX = -100;
+    }
+    gerson.style.left = posX + 'px';
+    requestAnimationFrame(moveGerson);
+  }
+
+  moveGerson();
+</script>
+
+</body>
+</html>

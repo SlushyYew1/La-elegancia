@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platos Fuertes - La Elegancia</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #2a1e0c, #523d0d);
+      font-family: 'Georgia', serif;
+      color: #f2e8d5;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #d9b56a;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      font-style: italic;
+      color: #bfa76f;
+      margin-bottom: 40px;
+      font-size: 1.2em;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      background-color: rgba(60, 46, 10, 0.9);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-list li {
+      font-size: 1.3em;
+      margin: 15px 0;
+      border-bottom: 1px solid #9a7c36;
+      padding-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .menu-list li:last-child {
+      border-bottom: none;
+    }
+
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .images img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+      filter: brightness(0.9);
+      cursor: pointer;
+    }
+
+    .images img:hover {
+      transform: scale(1.05);
+      filter: brightness(1);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-style: italic;
+      color: #c5b57d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Platos Fuertes</h1>
+  <p class="subtitle">Delicias que conquistan el paladar</p>
+
+  <ul class="menu-list">
+    <li>Filete Mignon con Salsa de Trufa</li>
+    <li>Salmon Ahumado en Costra de Hierbas</li>
+    <li>Risotto de Hongos Silvestres</li>
+    <li>Coq au Vin con Verduras Glaseadas</li>
+  </ul>
+
+  <div class="images">
+    <img src="filete.jpg" alt="Filete Mignon" />
+    <img src="salmon.jpg" alt="Salmón Ahumado" />
+    <img src="risotto.jpg" alt="Risotto de Hongos" />
+    <img src="coqauvin.jpg" alt="Coq au Vin" />
+  </div>
+
+  <footer>© 2025 Restaurante La Elegancia</footer>
+
+</body>
+</html>
+

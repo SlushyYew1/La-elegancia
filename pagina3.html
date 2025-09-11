@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Postres - La Elegancia</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #4a2a2a 0%, #1b0a0a 100%);
+    font-family: 'Georgia', serif;
+    color: #fbe7dc;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 3.8em;
+    margin-bottom: 10px;
+    color: #e8bfa6;
+    font-family: 'Cormorant Garamond', serif;
+    text-shadow: 0 0 15px #e8bfa6;
+  }
+
+  p.subtitle {
+    font-style: italic;
+    font-size: 1.4em;
+    margin-bottom: 60px;
+    color: #d1a78a;
+  }
+
+  .menu-list {
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+    background-color: rgba(74, 42, 42, 0.92);
+    border-radius: 30px;
+    padding: 40px 60px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.7);
+  }
+
+  .menu-list li {
+    font-size: 1.4em;
+    margin: 22px 0;
+    font-weight: 600;
+    border-bottom: 1px solid #b37c59;
+    padding-bottom: 12px;
+    cursor: default;
+    transition: color 0.3s ease;
+  }
+
+  .menu-list li:last-child {
+    border-bottom: none;
+  }
+
+  .menu-list li:hover {
+    color: #f4d6bc;
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .images img {
+    border-radius: 30px;
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    box-shadow: 0 14px 35px rgba(172, 101, 59, 0.85);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+    filter: brightness(0.92);
+  }
+
+  .images img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 22px 50px rgba(172, 101, 59, 1);
+    filter: brightness(1);
+  }
+
+  footer {
+    font-style: italic;
+    color: #c9a193;
+    margin-bottom: 20px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-list {
+      padding: 30px 25px;
+    }
+    .images img {
+      width: 90vw;
+      height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Postres Artesanales</h1>
+  <p class="subtitle">Dulzura y arte en cada bocado</p>
+
+  <ul class="menu-list" aria-label="Lista de postres">
+    <li>Mousse de Chocolate Belga con Frambuesas Frescas</li>
+    <li>Tarta Tatin de Manzana con Helado de Vainilla</li>
+    <li>Cheesecake de Maracuyá con Base de Galleta</li>
+    <li>Profiteroles Rellenos de Crema y Salsa de Caramelo</li>
+    <li>Panna Cotta de Vainilla Bourbon con Coulis de Fresa</li>
+    <li>Tiramisú Clásico con Toque de Licor Amaretto</li>
+  </ul>
+
+  <div class="images" aria-label="Imágenes de postres">
+    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=90" alt="Mousse de chocolate con frambuesas" />
+    <img src="https://images.unsplash.com/photo-1505253210343-f167fa1449d9?auto=format&fit=crop&w=800&q=90" alt="Tarta tatin de manzana" />
+    <img src="https://images.unsplash.com/photo-1578985545063-c0f79dcf4b25?auto=format&fit=crop&w=800&q=90" alt="Cheesecake de maracuyá" />
+    <img src="https://images.unsplash.com/photo-1589710755622-b382ecf8ac64?auto=format&fit=crop&w=800&q=90" alt="Profiteroles con caramelo" />
+    <img src="https://images.unsplash.com/photo-1608138475186-7769305f0c7a?auto=format&fit=crop&w=800&q=90" alt="Panna cotta con coulis de fresa" />
+    <img src="https://images.unsplash.com/photo-1562440499-cc13182e3853?auto=format&fit=crop&w=800&q=90" alt="Tiramisú clásico" />
+  </div>
+
+  <footer>© 2025 Restaurante La Elegancia</footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Bebidas Exclusivas - Restaurante La Elegancia</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #2c1a1a 0%, #5a3e3e 100%);
+    font-family: 'Playfair Display', serif;
+    color: #f8f1e7;
+    text-align: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 3.8em;
+    margin-bottom: 10px;
+    color: #d1bfa7;
+    text-shadow: 0 0 20px #d1bfa7;
+  }
+
+  p.subtitle {
+    font-style: italic;
+    font-size: 1.4em;
+    margin-bottom: 60px;
+    color: #c9a891;
+  }
+
+  .menu-list {
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+    background-color: rgba(90, 62, 62, 0.92);
+    border-radius: 30px;
+    padding: 40px 60px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.7);
+  }
+
+  .menu-list li {
+    font-size: 1.4em;
+    margin: 22px 0;
+    font-weight: 600;
+    border-bottom: 1px solid #bfa78c;
+    padding-bottom: 12px;
+    cursor: default;
+    transition: color 0.3s ease;
+  }
+
+  .menu-list li:last-child {
+    border-bottom: none;
+  }
+
+  .menu-list li:hover {
+    color: #f4e6d2;
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  .images img {
+    border-radius: 30px;
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    box-shadow: 0 14px 35px rgba(191, 167, 140, 0.85);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+    filter: brightness(0.9);
+  }
+
+  .images img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 22px 50px rgba(191, 167, 140, 1);
+    filter: brightness(1);
+  }
+
+  footer {
+    font-style: italic;
+    color: #c9a891;
+    margin-bottom: 20px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-list {
+      padding: 30px 25px;
+    }
+    .images img {
+      width: 90vw;
+      height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Bebidas Exclusivas</h1>
+  <p class="subtitle">Sabores refinados para paladares exigentes</p>
+
+  <ul class="menu-list" aria-label="Lista de bebidas">
+    <li>Whisky Single Malt 18 años - Glenfiddich Reserva</li>
+    <li>Cóctel Old Fashioned con toque de naranja y angostura</li>
+    <li>Vino Tinto Reserva Cabernet Sauvignon 2015</li>
+    <li>Champagne Brut Rosé - Moët & Chandon</li>
+    <li>Martini Clásico con aceituna y limón</li>
+    <li>Café Espresso Italiano con espuma de leche de almendra</li>
+  </ul>
+
+  <div class="images" aria-label="Imágenes de bebidas">
+    <img src="https://images.unsplash.com/photo-1567016552273-d0afc869163e?auto=format&fit=crop&w=800&q=90" alt="Vaso de whisky single malt" />
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=90" alt="Cóctel Old Fashioned" />
+    <img src="https://images.unsplash.com/photo-1510626176961-4b79ecf8e6a0?auto=format&fit=crop&w=800&q=90" alt="Botella de vino tinto" />
+    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f3e13?auto=format&fit=crop&w=800&q=90" alt="Champagne rosé" />
+    <img src="https://images.unsplash.com/photo-1521302080390-95f02ab1f46a?auto=format&fit=crop&w=800&q=90" alt="Martini clásico" />
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=90" alt="Café espresso" />
+  </div>
+
+  <footer>© 2025 Restaurante La Elegancia</footer>
+</body>
+</html>
